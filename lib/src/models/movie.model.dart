@@ -28,6 +28,7 @@ class Movie {
   double voteAverage;
   String overview;
   String releaseDate;
+  String uniqueId;
 
   Movie(
       {this.popularity,
@@ -70,4 +71,11 @@ class Movie {
     }
   }
 
+  getBackgroundImage() {
+    if (backdropPath == null) {
+      return 'https://static.thenounproject.com/png/1211233-200.png';
+    } else {
+      return 'https://image.tmdb.org/t/p/w500$backdropPath';
+    }
+  }
 }
